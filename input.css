@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Consola";
+  src: url("./assets/fonts/CONSOLA.TTF");
+}
+
+@theme {
+  --font-consola: "Consola", sans-serif;
+  --color-primary: #419059;
+}
+
+.display1 {
+  @apply text-6xl font-semibold font-consola;
+}
+
+.display2 {
+  @apply text-4xl font-consola font-semibold;
+}
+
+.subdisplay {
+  @apply text-2xl font-consola;
+}
+
+h1 {
+  @apply text-2xl font-bold font-consola;
+}
+
+h2 {
+  @apply text-xl font-bold font-consola;
+}
+
+h3 {
+  @apply text-lg font-bold font-consola;
+}
+
+p,
+a {
+  @apply text-lg font-consola;
+}
