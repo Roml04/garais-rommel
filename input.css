@@ -8,6 +8,11 @@
 @theme {
   --font-consola: "Consola", sans-serif;
   --color-primary: #419059;
+  --color-primary-dark: #2a703f;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .display1 {

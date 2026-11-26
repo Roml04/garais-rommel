@@ -1,11 +1,26 @@
 .project-1 {
-  background-image: url("./assets/images/Itori-HomePage-Front.webp");
+  background-image: url("./assets/images/DCS-FilePage-Front.webp");
 }
 
 .project-2 {
-  background-image: url("./assets/images/KumoWrite-HomePage-Front.webp");
+  background-image: url("./assets/images/FLS-BoardPage-Front.webp");
 }
 
 .project-3 {
   background-image: url("./assets/images/stipromotionalWebpage-Front.webp");
+}
+
+.project-1,
+.project-2,
+.project-3 {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-in-out;
+}
+
+.project-1:hover,
+.project-2:hover,
+.project-3:hover {
+  background-size: 150%;
 }

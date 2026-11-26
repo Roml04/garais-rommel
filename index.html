@@ -8,134 +8,441 @@
     <title>Rommel Garais | Full Stack Developer</title>
   </head>
   <body class="flex flex-col gap-16">
+    <!-- Intro/Hero Section -->
     <section class="h-dvh">
       <div
-        class="flex flex-col gap-4 md:gap-8 items-center justify-center h-full p-8 md:p-64"
+        class="flex flex-col gap-4 md:gap-8 items-center justify-center h-full p-8 md:px-64"
       >
         <img
           src="./assets//images/profile-pic.webp"
-          class="rounded-full aspect-square object-cover w-4/5 md:w-1/5"
+          class="transition-transform duration-300 ease-in-out hover:scale-110 rounded-full aspect-square object-cover w-2/3 md:w-1/5"
           alt=""
         />
         <div class="flex flex-col gap-4 md:gap-8 items-center">
-          <div>
+          <div class="flex flex-col gap-4">
             <p class="text-center">
               01 <span class="display1">Rommel Garais</span>
             </p>
             <p class="subdisplay text-center">Full Stack Software Developer</p>
           </div>
-          <a
-            href="#projects"
-            class="cursor-pointer rounded-full px-8 py-4 bg-primary text-white w-full md:w-fit flex justify-center items-center gap-2"
+          <button
+            class="cursor-pointer rounded-full px-8 py-4 transition-colors duration-300 hover:bg-primary-dark bg-primary text-white w-full md:w-fit flex justify-center items-center gap-2"
+            onclick="
+              document.getElementById('projects').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              })
+            "
           >
             <p>See my works</p>
             <img src="./assets/icons/arrow-right.svg" alt="" />
-          </a>
+          </button>
+          <!-- <a
+            href="#projects"
+            class="cursor-pointer rounded-full px-8 py-4 transition-colors duration-300 hover:bg-primary-dark bg-primary text-white w-full md:w-fit flex justify-center items-center gap-2"
+          >
+          </a> -->
         </div>
       </div>
     </section>
-    <section class="h-max" id="projects">
-      <div class="flex flex-col gap-4 p-8 md:p-64">
+
+    <!-- About Me Section -->
+    <section class="h-max" id="aboutme">
+      <div class="flex flex-col gap-4 md:gap-8 p-8 md:px-64">
+        <!-- Section Title -->
         <p>
           02
-          <span class="display2">Projects</span>
-        </p>
-        <div class="flex flex-col gap-4 md:gap-8 md:mx-24">
-          <div
-            class="relative z-50 before:bg-linear-to-b before:from-white/0 before:to-[#5C3F32]/75 before:content-[''] before:absolute before:inset-0"
-          >
-            <div
-              class="aspect-video group cursor-pointer w-full object-cover bg-cover bg-top flex items-end p-4 md:p-8 justify-between project-1"
-            >
-              <h2 class="relative text-white">.Document Control System</h2>
-              <a href="" class="relative text-white flex gap-2 hover:underline"
-                ><span class="hidden md:block text-xl">Visit Itori</span>
-                <img src="assets/icons/square-arrow-up-right-exit.svg"
-              /></a>
-            </div>
-          </div>
-          <div
-            class="relative z-50 before:bg-linear-to-b before:from-white/0 before:to-[#647BAD]/75 before:content-[''] before:absolute before:inset-0"
-          >
-            <div
-              class="aspect-video group cursor-pointer w-full object-cover bg-cover bg-top flex items-end p-4 md:p-8 justify-between project-2"
-            >
-              <h2 class="relative text-white">.Faculty Loading System</h2>
-              <a href="" class="relative text-white flex gap-2 hover:underline"
-                ><span class="hidden md:block text-xl">Visit KumoWrite</span>
-                <img src="assets/icons/square-arrow-up-right-exit.svg" />
-              </a>
-            </div>
-          </div>
-          <div
-            class="relative z-50 before:bg-linear-to-b before:from-white/0 before:to-[#CBC743]/75 before:content-[''] before:absolute before:inset-0"
-          >
-            <div
-              class="aspect-video group cursor-pointer w-full object-cover bg-cover bg-top flex items-end p-4 md:p-8 justify-between project-3"
-            >
-              <h2 class="relative text-white">.STI</h2>
-              <a href="" class="relative text-white flex gap-2 hover:underline"
-                ><span class="hidden md:block text-xl">Visit STI</span>
-                <img src="assets/icons/square-arrow-up-right-exit.svg" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="h-dvh" id="aboutme">
-      <div class="flex flex-col gap-8 p-8 md:p-64">
-        <p>
-          03
           <span class="display2">About Me</span>
         </p>
+
+        <!-- Profile -->
         <div class="flex flex-col justify-center items-center gap-8">
-          <img
-            src="./assets//images/profile-pic.webp"
-            class="rounded-full aspect-square object-cover w-2/3 md:w-1/5"
-            alt=""
-          />
-          <div>
-            <h1>Rommel Garais</h1>
+          <div class="flex flex-col gap-4">
             <p>
-              I am a Computer Science graduate with a strong interest in full
-              stack software development.
+              I am a
+              <span class="font-bold">BS in Computer Science</span> graduate
+              with a strong interest in
+              <span class="font-bold">Full Stack Software Development</span>.
+            </p>
+            <p>
+              I value maintainability, scalability, and security in software
+              development because I believe building good applications isn't
+              just about making them work. It's about ensuring they remain
+              reliable, manageable, and adaptable as requirements evolve.
+            </p>
+            <p>
+              Currently, I'm expanding my knowledge of modern web technologies,
+              exploring software architecture, and improving my ability to build
+              reliable and maintainable applications.
             </p>
           </div>
         </div>
-        <div class="">
-          <div class="flex flex-col gap-2">
-            <h1>.Full Stack Software Development</h1>
-            <div class="flex gap-2">
-              <img
-                class="aspect-square w-8"
-                src="./assets/icons/vscode-icon.svg"
-                alt=""
-              />
-              <img
-                class="aspect-square w-8"
-                src="./assets/icons/html-icon.svg"
-                alt=""
-              />
-              <img
-                class="aspect-square w-8"
-                src="./assets/icons/css-icon.svg"
-                alt=""
-              />
-              <img
-                class="aspect-square w-8"
-                src="./assets/icons/javasript-icon.svg"
-                alt=""
-              />
-              <img
-                class="aspect-square w-8"
-                src="./assets/icons/php-icon.svg"
-                alt=""
-              />
+
+        <!-- Resume -->
+        <div>
+          <a
+            target="_blank"
+            href="/assets/GARAIS-ROMMEL-(D-2).pdf"
+            rel="noopener noreferrer"
+            class="transition-colors duration-300 px-8 py-2 border rounded-lg hover:text-white hover:bg-black"
+            >View my Resume</a
+          >
+          <!-- <a
+            target="_blank"
+            href="/assets/images/GARAIS-ROMMEL-RESUME.webp"
+            class="transition-colors duration-300 px-8 py-2 border rounded-lg hover:text-white hover:bg-black"
+            >View my Resume</a
+          > -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="h-max" id="aboutme">
+      <div class="flex flex-col gap-4 md:gap-8 p-8 md:px-64">
+        <p>
+          03
+          <span class="display2">Technical Skills</span>
+        </p>
+        <div class="w-full flex flex-col gap-8">
+          <div class="flex flex-col gap-4">
+            <h1>.Development</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+              <div class="flex justify-center gap-4 border rounded-lg p-8">
+                <img
+                  class="aspect-square w-8"
+                  src="./assets/icons/laravel-svgrepo-com.svg"
+                  alt=""
+                />
+                <p>Laravel</p>
+              </div>
+              <div class="flex justify-center gap-4 border rounded-lg p-8">
+                <img
+                  class="aspect-square w-8"
+                  src="./assets/icons/react-svgrepo-com.svg"
+                  alt=""
+                />
+                <p>React</p>
+              </div>
+              <div class="flex justify-center gap-4 border rounded-lg p-8">
+                <img
+                  class="aspect-square w-8"
+                  src="./assets/icons/mysql-svgrepo-com.svg"
+                  alt=""
+                />
+                <p>MySQL</p>
+              </div>
+              <div class="flex justify-center gap-4 border rounded-lg p-8">
+                <img
+                  class="aspect-square w-8"
+                  src="./assets/icons/html-icon.svg"
+                  alt=""
+                />
+                <p>HTML 5</p>
+              </div>
+              <div class="flex justify-center gap-4 border rounded-lg p-8">
+                <img
+                  class="aspect-square w-8"
+                  src="./assets/icons/css-icon.svg"
+                  alt=""
+                />
+                <p>CSS</p>
+              </div>
+              <div class="flex justify-center gap-4 border rounded-lg p-8">
+                <img
+                  class="aspect-square w-8"
+                  src="./assets/icons/javasript-icon.svg"
+                  alt=""
+                />
+                <p>JavaScript</p>
+              </div>
+              <div class="flex justify-center gap-4 border rounded-lg p-8">
+                <img
+                  class="aspect-square w-8"
+                  src="./assets/icons/php-icon.svg"
+                  alt=""
+                />
+                <p>PHP</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h1>.Containerization & System Orchestration</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+              <div class="flex justify-center gap-4 border rounded-lg p-8">
+                <img
+                  class="aspect-square w-8"
+                  src="./assets/icons/docker-svgrepo-com.svg"
+                  alt=""
+                />
+                <p>Docker & Docker Compose</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h1>.Version Control</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+              <div class="flex justify-center gap-4 border rounded-lg p-8">
+                <img
+                  class="aspect-square w-8"
+                  src="./assets/icons/git-svgrepo-com.svg"
+                  alt=""
+                />
+                <p>Git</p>
+              </div>
+              <div class="flex justify-center gap-4 border rounded-lg p-8">
+                <img
+                  class="aspect-square w-8"
+                  src="./assets/icons/github-icon.svg"
+                  alt=""
+                />
+                <p>GitHub</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Projects Section -->
+    <section class="h-max" id="projects">
+      <div class="flex flex-col gap-4 md:gap-8 p-8 md:px-64">
+        <p>
+          04
+          <span class="display2">Projects</span>
+        </p>
+        <div class="flex flex-col gap-4 md:gap-16 md:mx-24">
+          <!-- Project 1 -->
+          <div class="flex flex-col gap-8">
+            <div
+              class="w-full before:pointer-events-none relative before:bg-linear-to-b before:from-white/0 before:to-[#000000]/75 before:content-[''] before:absolute before:inset-0"
+            >
+              <div
+                class="w-full aspect-video group cursor-pointer bg-cover bg-left flex items-end p-4 md:p-8 justify-between project-1"
+              >
+                <h2 class="relative text-white">.Document Control System</h2>
+              </div>
+            </div>
+            <div class="flex gap-2 w-full">
+              <div
+                class="group overflow-hidden w-full hover:shadow-2xl transition-shadow duration-300"
+              >
+                <img
+                  class="hover:scale-150 w-full transition-scale duration-300 ease-in-out"
+                  src="./assets/images/DCS-LoginPage-Front.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="group overflow-hidden w-full hover:shadow-2xl transition-shadow duration-300"
+              >
+                <img
+                  class="hover:scale-150 origin-top-left w-full transition-scale duration-300 ease-in-out"
+                  src="./assets/images/DCS-FilesPage-Front.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h1>.Document Control System</h1>
+              <p>
+                A web-based document management system designed to streamline
+                document submission, revision, review, approval, and publishing
+                workflows. Independently developed both the frontend and
+                backend, from implementation to system integration.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h1>.Technologies Used</h1>
+              <div class="flex gap-2 flex-wrap">
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/laravel-svgrepo-com.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/react-svgrepo-com.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/mysql-svgrepo-com.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/html-icon.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/css-icon.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/javasript-icon.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/php-icon.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/docker-svgrepo-com.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/git-svgrepo-com.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/github-icon.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="flex flex-col gap-8">
+            <div
+              class="relative z-50 before:pointer-events-none before:bg-linear-to-b before:from-white/0 before:to-[#647BAD]/75 before:content-[''] before:absolute before:inset-0"
+            >
+              <div
+                class="aspect-video group cursor-pointer w-full object-cover bg-cover bg-top flex items-end p-4 md:p-8 justify-between project-2"
+              >
+                <h2 class="relative text-white">.Faculty Loading System</h2>
+                <!-- <a href="" class="relative text-white flex gap-2 hover:underline"
+                ><span class="hidden md:block text-xl">Visit KumoWrite</span>
+                <img src="assets/icons/square-arrow-up-right-exit.svg" />
+              </a> -->
+              </div>
+            </div>
+            <div class="flex gap-2 w-full">
+              <div
+                class="group overflow-hidden w-full hover:shadow-2xl transition-shadow duration-300"
+              >
+                <img
+                  class="hover:scale-150 w-full transition-scale duration-300 ease-in-out"
+                  src="/assets/images/FLS-LoginPage-Front.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="group overflow-hidden w-full hover:shadow-2xl transition-shadow duration-300"
+              >
+                <img
+                  class="hover:scale-150 w-full transition-scale duration-300 ease-in-out"
+                  src="/assets/images/FLS-SchedulePage-Front.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h1>.Faculty Loading System</h1>
+              <p>
+                A web-based document management system designed to streamline
+                document submission, revision, review, approval, and publishing
+                workflows. Independently developed both the frontend and
+                backend, from implementation to system integration.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4">
+              <h1>.Technologies Used</h1>
+              <div class="flex gap-2 flex-wrap">
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/laravel-svgrepo-com.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/mysql-svgrepo-com.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/html-icon.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/css-icon.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/javasript-icon.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/php-icon.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/git-svgrepo-com.svg"
+                  alt=""
+                />
+                <img
+                  class="transition-transform duration-300 ease-in-out hover:scale-110 aspect-square w-8"
+                  src="./assets/icons/github-icon.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="h-max mb-40">
+      <div class="flex flex-col gap-4 md:gap-8 p-8 md:px-64">
+        <p class="">
+          05
+          <span class="display2">Contacts</span>
+        </p>
+        <div class="flex flex-col gap-4">
+          <div class="flex gap-4 items-center w-fit">
+            <img
+              class="aspect-square w-8"
+              src="./assets/icons/mail.svg"
+              alt=""
+            />
+            <p>garaisrommel04@gmail.com</p>
+          </div>
+          <a
+            href="https://www.linkedin.com/in/rommel-garais"
+            target="_blank"
+            class="flex gap-4 items-center w-fit"
+          >
+            <img
+              class="aspect-square w-8"
+              src="./assets/icons/linkedin-svgrepo-com.svg"
+              alt=""
+            />
+            <p>Rommel Garais</p>
+          </a>
+          <a
+            href="https://github.com/Roml04"
+            target="_blank"
+            class="flex gap-4 items-center w-fit"
+          >
+            <img
+              class="aspect-square w-8"
+              src="./assets/icons/github-icon.svg"
+              alt=""
+            />
+            <p>Roml04</p>
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
